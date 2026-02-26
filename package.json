@@ -5,7 +5,9 @@
   "main": "app.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node --max-old-space-size=460 --no-deprecation app.js"
+    "start": "node --max-old-space-size=460 --no-deprecation app.js",
+    "build": "cd web && npm install && npm run build",
+    "postinstall": "npm run build"
   },
   "author": "Easir Iqbal Mahi",
   "license": "ISC",
@@ -14,8 +16,11 @@
     "body-parser": "^1.20.3",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0",
+    "concurrently": "^9.2.1",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
     "mongoose": "^9.1.2",
     "node-fetch": "^2.6.1",
     "nodemailer": "^7.0.12",
